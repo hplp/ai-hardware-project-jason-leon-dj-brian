@@ -20,9 +20,7 @@ This project will create a simple, real-time face detection and recognition syst
 
 ## Key Objectives:
 - Implement Face Detection Model: Use TinyML-compatible lightweight model (e.g., MobileNet) tailored for Arduino to detect and recognize faces within constrained hardware limits.
-- Optimize Model for Embedded Constraints: Compress and optimize the model for memory and processing efficiency, ensuring it runs effectively on Arduino hardware.
 - Develop Real-time Face Recognition System: Enable real-time face detection and recognition with minimal latency, using camera input and Arduino processing.
-- Integrate Feedback Mechanism: Add visual or audio feedback (e.g., LEDs or buzzer) to indicate recognition success or failure, enhancing system interactivity.
 - Evaluate Model Accuracy and Performance: Test and refine model accuracy and speed, focusing on high recognition rates and low false positives within the project's hardware constraints.
 - Document System Design and Code: Provide clear documentation for the setup, code, and overall system to aid reproducibility and future improvements.
 
