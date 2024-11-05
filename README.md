@@ -27,9 +27,9 @@ CCTV Security Facial Recognition
 - Document System Design and Code: Provide clear documentation for the setup, code, and overall system to aid reproducibility and future improvements.
 
 ## Technology Stack:
-The hardware program we plan to use is the Arduino TinyML Kit and Camera
-Software Tools we plan to use are the Aruduino IDE with the Arduino coding language
-Could potentially use Google Colab as well.
+The hardware program we plan to use is the Arduino TinyML Kit and Camera.
+Software Tools we plan to use are the Aruduino IDE with the Arduino coding language.
+We could potentially use Google Colab as well.
 
 ## Expected Outcomes:
 (Describe what you expect to deliver at the end of the project)
