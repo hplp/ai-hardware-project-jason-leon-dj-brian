@@ -30,4 +30,7 @@ CCTV Security Facial Recognition
 (Describe what you expect to deliver at the end of the project)
 
 ## Timeline:
-(Provide a rough timeline or milestones for the project)
+Week 1: Start learning for the arduino tinyML kit works. Figure out what it's capable of and the limitiations 
+Week 2: Start developing the algrothim to identify faces, debug any major issues 
+Week 3: Continue working on algrothim potenial add addential functionality
+Week 4: Final software/hardware checks and finish writing up presentation
