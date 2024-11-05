@@ -32,7 +32,7 @@ Software Tools we plan to use are the Aruduino IDE with the Arduino coding langu
 We could potentially use Google Colab as well.
 
 ## Expected Outcomes:
-(Describe what you expect to deliver at the end of the project)
+A TinyML system that is able to compare and identify one of four faces. Using training data of facial images from different perspectives, the system should ultimately correctly identify the specific student with different diguises and alterations to their faces. 
 
 ## Timeline:
 - Week 1: Start learning how arduino tinyML kit works. Figure out what it's capable of and the limitiations 
