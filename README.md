@@ -16,7 +16,7 @@
 Head Hunters
 
 ## Project Description:
-CCTV Security Facial Recognition
+This project will create a simple, real-time face detection and recognition system using the Arduino TinyML Kit with a camera. We'll use a lightweight model like MobileNet, tailored to fit Arduino's limited memory and processing power, to detect and recognize faces. Visual or audio feedback (such as LEDs or a buzzer) will indicate if a face is recognized, making the system interactive. We'll test the system to make sure it works accurately and quickly, and provide clear documentation to explain the setup, code, and design for easy understanding and future improvements.
 
 ## Key Objectives:
 - Implement Face Detection Model: Use TinyML-compatible lightweight model (e.g., MobileNet) tailored for Arduino to detect and recognize faces within constrained hardware limits.
