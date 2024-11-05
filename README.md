@@ -4,7 +4,7 @@
 # AI_Hardware_Project_Template
 
 ## Team Name: 
-(Enter your team name from Canvas)
+4501_project_group4
 
 ## Team Members:
 - Jason Nguyen
@@ -13,10 +13,10 @@
 - DJ Veliadis
 
 ## Project Title:
-(Enter your project title - be creative)
+Head Hunters
 
 ## Project Description:
-(Provide a short description of the problem you're addressing)
+CCTV Security Facial Recognition
 
 ## Key Objectives:
 - Objective 1
