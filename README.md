@@ -16,11 +16,11 @@
 Head Hunters
 
 ## Project Description:
-This project will create a simple, real-time face detection and recognition system using the Arduino TinyML Kit with a camera. We'll use a lightweight model like MobileNet, tailored to fit Arduino's limited memory and processing power, to detect and recognize faces. We'll test the system to make sure it works accurately and quickly, and provide clear documentation to explain the setup, code, and design for easy understanding and future improvements.
+This project will create a simple, face detection and recognition system using the Arduino TinyML Kit with a camera. We'll use a lightweight model like MobileNet, tailored to fit Arduino's limited memory and processing power, to detect and recognize faces. We'll test the system to make sure it works accurately and quickly, and provide clear documentation to explain the setup, code, and design for easy understanding and future improvements.
 
 ## Key Objectives:
 - Implement Face Detection Model: Use TinyML-compatible lightweight model (e.g., MobileNet) tailored for Arduino to detect and recognize faces within constrained hardware limits.
-- Develop Real-time Face Recognition System: Enable real-time face detection and recognition with minimal latency, using camera input and Arduino processing.
+- Develop Face Recognition System: Enable face detection and recognition using camera input and Arduino processing.
 - Evaluate Model Accuracy and Performance: Test and refine model accuracy and speed, focusing on high recognition rates and low false positives within the project's hardware constraints.
 - Document System Design and Code: Provide clear documentation for the setup, code, and overall system to aid reproducibility and future improvements.
 
