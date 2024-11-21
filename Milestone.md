@@ -21,6 +21,7 @@ Your progress should reflect the following by providing screenshots, photos, and
 
 ## Set up your hardware (if applicable)
 
+<img width="372" alt="image" src="https://github.com/user-attachments/assets/5ea36b3e-2d8e-4091-87d5-d3741110cc72">
 
 
 ## Identify (or train) your model 
