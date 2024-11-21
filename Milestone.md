@@ -37,4 +37,11 @@ We found a repository (https://github.com/edgeimpulse/workshop-arduino-tinyml-ro
 
 ## Respond to the feedback in the repo.
 
-**This looks like something we will do after they give us feedback, not sure we need anything on this for now unless it's talking about the proposal feedback?**
+**Feedback received on proposal presentation assignment:** 
+"Everything was very clearly defined and laid out" - James Chun
+"Great presentation!" - Michael Sekyi
+"Cool project! I like the scope of the project and the specificity of your objectives, excited to see the results!" - Andy Chen
+"Looks good, all parts of proposal covered. The project is promising but realistic." - Kyle Clemente
+"Exciting project! The proposal looks decent. The application is interesting. Try to idendify the source of the data that is to be used in the training and place it to Github. Verify the model size fits to the hardware. If you are going to share the hardware, contact with the group who you will share the hardware with." - Tongxuan Tian
+"Strong proposal with a lot of detail on the objectives in terms of what kinds of specific features are being portrayed and how they will be evaluated. Expected outcomes can be improved by describing a more concrete output or deliverable as the ultimate goal." - Davis Wang
+"Very unique project! I've always wondered how these systems within our phones were so accurate, to be able to distinguish between similar facial features, so I am looking forward to the final results and demo of this project. The timeline looks reasonable and they seem capable of bringing this in on time during their presentation." - Phi Lu
