@@ -14,6 +14,9 @@ In this milestone, you will provide the URL of your repo (which reflects the pro
 
 If you provide the link to your repo, create an explicit section (or folder) for the milestone. You can provide the link directly to that section.
 
+In order to be able to use the Arduino Tiny ML kit, we first needed to download the latest version of the Arduino IDE and a Python version above 3.6 (we downloaded 3.12.7 specifically)
+We found a repository (https://github.com/edgeimpulse/workshop-arduino-tinyml-roshambo.git) with code available for use under the Apache License 2.0, and used that to capture our images. After cloning the repository to our local machines, and navigating to the project's root, we need to run ```python3 -m pip install Pillow pyserial``` in order to have the dependencies we need in order to run ```python3 -m pip install Pillow pyserial```
+
 **Let's provide the link to this specific section when we're done.**
 
 Your progress should reflect the following by providing screenshots, photos, and instructions.
