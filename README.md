@@ -4,7 +4,7 @@
 # AI_Hardware_Project_Template
 
 ## Team Name: 
-4501_project_group4
+Head Hunters
 
 ## Team Members:
 - Jason Nguyen
