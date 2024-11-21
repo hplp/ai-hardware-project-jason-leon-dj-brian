@@ -21,7 +21,7 @@ Your progress should reflect the following by providing screenshots, photos, and
 
 ## Set up your hardware (if applicable)
 
-**Provide a picture of the arduino set up on Brian's laptop**
+
 
 ## Identify (or train) your model 
 
