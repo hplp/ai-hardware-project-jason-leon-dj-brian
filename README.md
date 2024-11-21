@@ -9,7 +9,7 @@ Head Hunters
 ## Team Members:
 - Jason Nguyen
 - Brian Boner
-- Leon Vaughn
+- Leon Vaughan
 - DJ Veliadis
 
 ## Project Title:
