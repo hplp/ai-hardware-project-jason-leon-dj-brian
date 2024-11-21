@@ -36,6 +36,7 @@ We found a repository (https://github.com/edgeimpulse/workshop-arduino-tinyml-ro
 
 
 ## Respond to the feedback in the repo.
+We are very pleased with the positive feedback we've received by our peers directly below. The source of the data that is to be used in the training is directly from the arduino camera, as well as a database online containing hundreds of random faces. We have verified that the model size does fit our hardware. Additionally, our expected outcome of this entire project is to have our program be able to distinguish between our group members, the random faces online, and no faces through proper facial recognition. 
 
 **Feedback received on proposal presentation assignment:** 
 - "Everything was very clearly defined and laid out" - James Chun
