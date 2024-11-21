@@ -1,7 +1,7 @@
 ## Team Name:
 Head Hunters
-## Project Name: 
-
+## Project Title: 
+TinyFaces: Real-Time Face Recognition on Arduino
 ## Team Members:
 - Jason Nguyen
 - Brian Boner
