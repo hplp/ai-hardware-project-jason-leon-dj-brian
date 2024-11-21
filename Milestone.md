@@ -9,14 +9,14 @@ In this milestone, you will provide the URL of your repo (which reflects the pro
 
 If you provide the link to your repo, create an explicit section (or folder) for the milestone. You can provide the link directly to that section.
 
-##Lets provide the ink to this specific section when we're done.
+## Let's provide the ink to this specific section when we're done.
 
 Your progress should reflect the following by providing screenshots, photos, and instructions.
 
 
 Set up your hardware (if applicable)
 
-##Provide a picture of the arduino set up on Brian's laptop
+## Provide a picture of the arduino set up on Brian's laptop
 
 Identify (or train) your model 
 
