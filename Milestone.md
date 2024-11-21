@@ -28,7 +28,7 @@ Your progress should reflect the following by providing screenshots, photos, and
 
 ## Identify (or train) your model 
 
-**Explain how we're training our model through feeding many pictures of us, a dataset of random faces found online, and picture of no faces**
+**In order to train our model, we first had to use the code in the "program your hardware" section to access the arduino camera. Once accessed, we took multiple pictures of each group member at different angles and with different facial expressions. All photos taken for a specific group member was labeled as a class of their name. When our model recognizes any one of our faces, the green LED on the arduino board should be activated and the name of the specific group member should be printed in the console.**
 
 ## Program your hardware
 
