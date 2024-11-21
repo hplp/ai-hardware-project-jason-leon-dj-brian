@@ -13,7 +13,7 @@ Head Hunters
 - DJ Veliadis
 
 ## Project Title:
-Head Hunters
+TinyFaces: Real-Time Face Recognition on Arduino
 
 ## Project Description:
 This project will create a simple, face detection and recognition system using the Arduino TinyML Kit with a camera. We'll use a lightweight model like MobileNet, tailored to fit Arduino's limited memory and processing power, to detect and recognize faces. We'll test the system to make sure it works accurately and quickly, and provide clear documentation to explain the setup, code, and design for easy understanding and future improvements.
