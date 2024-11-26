@@ -32,7 +32,7 @@ Below is an image of how our hardware was set up, being plugged in via micro USB
 
 ## Program your hardware
 **In order to be able to use the Arduino Tiny ML kit, we first needed to download the latest version of the Arduino IDE and a Python version above 3.6 (we downloaded 3.12.7 specifically)
-We found a repository (https://github.com/edgeimpulse/workshop-arduino-tinyml-roshambo.git) with code available for use under the Apache License 2.0, and used that to capture our images. After cloning the repository to our local machines, and navigating to the project's root, we need to run ```python3 -m pip install Pillow pyserial``` in order to have the dependencies we need in order to run ```python3 serial-image-capture.py```**
+We found a repository (https://github.com/edgeimpulse/workshop-arduino-tinyml-roshambo.git) with code available for use under the Apache License 2.0, and used that to capture our images. After cloning the repository to our local machines, and navigating to the project's root, we need to run ```python3 -m pip install Pillow pyserial``` in order to run ```python3 serial-image-capture.py```**
 
 ## Run the first iterations to test the computation module in your system.
 We were unable to test how the AI model worked live when trying to recognize our faces versus others' faces or background details due to having to share our hardware but we'll be able to validate its functionality in our next milestone. At this stage we're very confident that the work we've done will be able to function correctly with some minor tweaking once we get the board back.
