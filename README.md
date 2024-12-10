@@ -158,7 +158,7 @@ Go to the **Model testing** page and click **Classify all**. This will perform i
 
 Navigate to the **Deployment** page in your project. In the search bar, enter **Arduino** and select the **Arduino library** option.
 
-Scroll down to the bottom of the page. Leave the [EON Compiler](https://www.edgeimpulse.com/blog/introducing-eon) enabled. Leave *Quantized (int8)* selected. Click **Build**
+Scroll down to the bottom of the page. Leave the [EON Compiler](https://www.edgeimpulse.com/blog/introducing-eon) enabled. Leave *Quantized (int8)* selected. Click **Build**.
 
 When the build process is complete, you should have an Arduino library (in .zip format) automatically downloaded to your computer. This library includes the fully trained model.
 
