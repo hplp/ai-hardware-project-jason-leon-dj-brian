@@ -11,10 +11,12 @@ Head Hunters
 - Leon Vaughan
 - DJ Veliadis
 
-## Setup
-We used the Arduino Nano 33 BLE Sense Board and the OV7675 camera from the Arduino TinyML kit. (include picture below)
+## Introduction and Setup
+(Intro to project)
 
-To complete this project, we used multiple free software applications.
+We used the Arduino Nano 33 BLE Sense Board and the OV7675 camera from the Arduino TinyML kit. (include picture below) 
+
+To complete this project, we used multiple free software tools.
 - [Arduino IDE][arduino_website] (Follow instructions to download)
 - [Google Colab][colab_website] (Requires free google account)
 - [Edge Impulse][impulse_website] (Create free account to use)
@@ -27,8 +29,16 @@ python3 -m pip install Pillow pyserial
 
 > If you do not have pip installed, you will need to [install it](https://pip.pypa.io/en/stable/installation/).
 
-## Image Capture
+To follow along with the project, you will need to download the files below
+- [Serial Communication with OV7675 camera](Arduino_OV767X.zip)
+- [Arduino Image Capture](nano33_tinyml_kit_image_serial.ino)
+- [Base64 Image Data Format](base64.h)
+- [Python Image Capture](serial-image-catpure.py)
+- [Data Augmentation Jupyter Notebook](ei-image-augmentation.ipynb)
+- [Live Image Classification](nano33_camera_live_inference.ino)
 
+## Image Capture
+To capture images, we 
 
 ## Data Augmentation
 
