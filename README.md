@@ -88,7 +88,7 @@ Now, setup the camera such that only your face is visible in the live view of th
 
 Capture at least 50 images of the background with the label *_background* so the model can recognize when a face does not appear within the frame. 
 
-After all images are capture, add them to a single .zip file. In Windows you can do this by highlighting all of your image files and Right-Clicking **Send to > Compressed (zipped) folder** name the .zip file **dataset.zip**. 
+After all images are captured, add them to a single .zip file. In Windows you can do this by highlighting all of your image files and Right-Clicking **Send to > Compressed (zipped) folder** name the .zip file **dataset.zip**. 
 
 ## Data Augmentation (Optional)
 If you are not able to capture enough data to train the model, you can alter each image to create a larger dataset. To do this, you can use the provided [jupyter notebook](examples/ei-image-augmentation.ipynb). 
