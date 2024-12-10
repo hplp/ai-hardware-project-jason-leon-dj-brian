@@ -146,6 +146,8 @@ Click **Save parameters** and click **Generate features** on the next page. Wait
 
 When feature extraction is complete, you should see a 2D feature explorer showing the relative separation among the class groupings along with an estimation of the time and resources required to perform feature extraction on your target device (default: Arm Cortex-M4F).
 
+![Data Explorer](images/explorer.JPG)
+
 Click on **Classifier** under *Impulse design*. Change the *Number of training cycles* (epochs) to **100**. Leave everything else as default. Click **Start training**.
 
 ![Training Edge Impulse](images/training.JPG)
