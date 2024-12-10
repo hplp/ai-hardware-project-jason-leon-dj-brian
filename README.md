@@ -15,7 +15,7 @@ Head Hunters
 (Intro to project)
 
 We used the Arduino Nano 33 BLE Sense Board and the OV7675 camera from the Arduino TinyML kit. 
-(include picture of board with camera) 
+![Arduino Board](images/ArduinoBoard.jpg) 
 
 To complete this project, we used multiple free software tools.
 - [Arduino IDE][arduino_website] (Follow instructions to download)
@@ -31,19 +31,19 @@ python3 -m pip install Pillow pyserial
 > If you do not have pip installed, you will need to [install it](https://pip.pypa.io/en/stable/installation/).
 
 To follow along with the project, you will need to download the files below and save them to the same folder. 
-- [Serial Communication with OV7675 camera](Arduino_OV767X.zip)
-- [Arduino Image Capture](nano33_tinyml_kit_image_serial.ino)
-- [Base64 Image Data Format](base64.h)
-- [Python Image Capture](serial-image-catpure.py)
-- [Data Augmentation Jupyter Notebook](ei-image-augmentation.ipynb)
-- [Live Image Classification](nano33_camera_live_inference.ino)
+- [Serial Communication with OV7675 camera](examples/Arduino_OV767X.zip)
+- [Arduino Image Capture](examples/nano33_tinyml_kit_image_serial.ino)
+- [Base64 Image Data Format](examples/base64.h)
+- [Python Image Capture](examples/serial-image-catpure.py)
+- [Data Augmentation Jupyter Notebook](examples/ei-image-augmentation.ipynb)
+- [Live Image Classification](examples/nano33_camera_live_inference.ino)
 
 ## Image Capture
 To train the model to recognize your faces, you need to capture images of your faces on the OV767X camera. You can use the following files to do so:
-- [Serial Communication with OV7675 camera](Arduino_OV767X.zip)
-- [Arduino Image Capture](nano33_tinyml_kit_image_serial.ino)
-- [Base64 Image Data Format](base64.h)
-- [Python Image Capture](serial-image-catpure.py)
+- [Serial Communication with OV7675 camera](examples/Arduino_OV767X.zip)
+- [Arduino Image Capture](examples/nano33_tinyml_kit_image_serial.ino)
+- [Base64 Image Data Format](examples/base64.h)
+- [Python Image Capture](examples/serial-image-catpure.py)
 
 After these files are downloaded, make sure they are all in the same folder. 
 Open the Arduino IDE. In the Arduino IDE, **Sketch > Include Library > Add .ZIP Librar...**. Select **Arduino_OV767X.zip** file. This library is required for the Arduino Nano 33 BLE Sense to communicate with the camera on the TinyML kit.
@@ -67,7 +67,7 @@ Install [PySerial](https://pyserial.readthedocs.io/en/latest/) and [Pillow](http
 python3 -m pip install Pillow pyserial
 ```
 
-Run the [Serial Image Capture Python](serial-image-catpure.py) script:
+Run the [Serial Image Capture Python](examples/serial-image-catpure.py) script:
 
 ```shell
 python3 serial-image-capture.py
@@ -80,18 +80,18 @@ From the **Port** drop-down menu, select the serial port associated with your Ar
 
 Press **Connect**. You should see a live view of the Arduino camera. Click *Embiggen view* to make the image bigger. Due to the slow nature of converting and transmitting raw image data over a serial connection, do not expect more than a few frames per second.
 
-(Include picture of serial window)
+![Serial Image Capture](images/SerialCapture.JPG)
 
 Now, setup the camera such that only your face is visible in the live view of the Arduino camera. Enter your name in the box next to *Label* to set the label of the image to your name. Click **Save Image** to save the image to the directory that the Python script is in. Capture at least 50 images, slightly altering where you appear in the frame and how your head is oriented to create as full of a dataset as possible. Repeat this process for each person that you want to identify (try to keep the number of different people small).
 
-(Include picture of face)
+![Image Capture of Face](images/FaceCapture.JPG)
 
 Capture at least 50 images of the background with the label *_background* so the model can recognize when a face does not appear within the frame. 
 
 After all images are capture, add them to a single .zip file. In Windows you can do this by highlighting all of your image files and Right-Clicking **Send to > Compressed (zipped) folder** name the .zip file **dataset.zip**. 
 
 ## Data Augmentation (Optional)
-If you are not able to capture enough data to train the model, you can alter each image to create a larger dataset. To do this, you can use the provided [jupyter notebook](ei-image-augmentation.ipynb). 
+If you are not able to capture enough data to train the model, you can alter each image to create a larger dataset. To do this, you can use the provided [jupyter notebook](examples/ei-image-augmentation.ipynb). 
 
 Once you have the notebook downloaded, open [Google Colab](colab_website)
 
@@ -103,7 +103,7 @@ Go to [edgeimpulse.com](https://edgeimpulse.com/). Create an account if you have
 
 Click on **Dashboard** and click on the **Keys** tab. Double-click to highlight the entire API key and copy it (don't worry if you can't see the whole key, it will be copied).
 
-(include picture of keys tab)
+![Edge Impulse Keys Page](images/keys.JPG)
 
 Go back to the Google Colab script. Continue running cells until you get to the `### Settings` cell. Overwrite the value of the `EI_API_KEY` string with the API key you copied from your project.
 
@@ -123,7 +123,7 @@ If you collected enough data to skip the data augmentation section, you will nee
 
 To upload your images to Edge Impulse, put them all in a single folder. Navigate to **Data Acquisition** and click on the *Upload Data* button. Select *Select a folder* for **Upload mode**, *Automatically split between training and testing* for **Upload into category**, and *Infer from filename* for **Label**. Next click on *choose files* and select the folder with your images. Finally, select **Upload Data** to upload your images. 
 
-(include image of data upload page)
+![Upload Data Edge Impulse](images/upload.JPG)
 
 > **Note**
 > The Python script that we used to capture images automatically saved each image to a file with the file name as the label followed by a unique id, which allows for Edge Impulse to label each image accurately based on the filename.
@@ -136,7 +136,7 @@ Go to your project in Edge Impulse. Go to the **Impulse design** page. Change th
 
 Click **Add a processing block** and add the **Image** block. Click **Add a learning block** and select the **Classification** block.
 
-(include image of create impulse tab)
+![Impulse Creation](images/impulse.JPG)
 
 Click on **Image** under *Impulse design*. Change the *Color depth* to **Grayscale**. 
 
@@ -148,11 +148,11 @@ When feature extraction is complete, you should see a 2D feature explorer showin
 
 Click on **Classifier** under *Impulse design*. Change the *Number of training cycles* (epochs) to **100**. Leave everything else as default. Click **Start training**.
 
-(include image of classifiers tab)
+![Training Edge Impulse](images/training.JPG)
 
 Go to the **Model testing** page and click **Classify all**. This will perform inference on your test dataset and display the results.
 
-(include image of model testing page)
+![Testing Edge Impulse](images/testing.JPG)
 
 Navigate to the **Deployment** page in your project. In the search bar, enter **Arduino** and select the **Arduino library** option.
 
@@ -160,11 +160,13 @@ Scroll down to the bottom of the page. Leave the [EON Compiler](https://www.edge
 
 When the build process is complete, you should have an Arduino library (in .zip format) automatically downloaded to your computer. This library includes the fully trained model.
 
+![Deploy Edge Impulse](images/deploy.JPG)
+
 
 ## Setup Live Image Classification
 Next, we set up the Arduino Nano 33 BLE Sense board to be able to perform live image classification of our faces.
 
-If you have not already, download the [Arduino Live Image Classification](nano33_camera_live_inference.ino) program make sure the [Base64](base64.h) file is in the same folder.
+If you have not already, download the [Arduino Live Image Classification](examples/nano33_camera_live_inference.ino) program make sure the [Base64](examples/base64.h) file is in the same folder.
 
 Open the Arduino IDE then open the Live Image Classification script **File > Open** and navigate to the program on your computer. 
 
@@ -186,7 +188,7 @@ python3 serial-image-capture.py
 
 Select the port of your Arduino board and click **Connect**. The viewer will show you what the Arduino sees. Use the same setup as you did for image collection and get in front of the OV767 camera. The terminal window should have the printed inference results. The values correspond to the prediction scores -- the highest prediction score is the classification result. 
 
-(include image of live classification)
+![Live Image Classification](images/LiveClassification.JPG)
 
 ## Testing and Results
 (explain our results)
