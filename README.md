@@ -142,7 +142,7 @@ Click on **Image** under *Impulse design*. Change the *Color depth* to **Graysca
 
 Click **Save parameters** and click **Generate features** on the next page. Wait while Edge Impulse generates the training features from your dataset.
 
-(include image of image tab)
+![Greyscale Parameter](images/image.JPG)
 
 When feature extraction is complete, you should see a 2D feature explorer showing the relative separation among the class groupings along with an estimation of the time and resources required to perform feature extraction on your target device (default: Arm Cortex-M4F).
 
