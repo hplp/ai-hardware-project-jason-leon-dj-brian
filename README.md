@@ -52,7 +52,7 @@ Next, go to **File > Open...** and open the sketch **(YourFilePath)/nano33_tinym
 
 Plug the Arduino Nano 33 BLE Sense board into your computer and make sure the board/port show up in the IDE
 
-Compile and upload the sketch to the board (**Sketch > Upload**)
+Compile and upload the sketch to the board (**Sketch > Upload**).
 You should see "Done" if your program uploaded successfully.
 
 Open a terminal or command prompt window and navigate to the directory that contains the Python Serial Image Captrue script. Example (windows):
