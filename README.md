@@ -38,9 +38,49 @@ To follow along with the project, you will need to download the files below
 - [Live Image Classification](nano33_camera_live_inference.ino)
 
 ## Image Capture
-To capture images, we 
+To train the model to recognize your faces, you needed to capture images of hyour faces on the OV767X camera. You can use the following files to do so (should we include original repo?):
+- [Serial Communication with OV7675 camera](Arduino_OV767X.zip)
+- [Arduino Image Capture](nano33_tinyml_kit_image_serial.ino)
+- [Base64 Image Data Format](base64.h)
+- [Python Image Capture](serial-image-catpure.py)
 
-## Data Augmentation
+After these files are on your computer, open the Arduino IDE. 
+In the Arduino IDE, **Sketch > Include Library > Add .ZIP Librar...**. Select **Arduino_OV767X.zip** file. This library is required for the Arduino Nano 33 BLE Sense to communicate with the camera on the TinyML kit.
+
+Next, go to **File > Open...** and open the sketch **(YourFilePath)/nano33_tinyml_kit_image_serial.ino**. This file will capture, scale and crop the image and output it as Base64 data. 
+
+Plug the Arduino Nano 33 BLE Sense board into your computer and make sure the board/port show up in the IDE
+
+Compile and upload the sketch to the board (**Sketch > Upload**)
+You should see "Done" if your program uploaded successfully.
+
+Open a terminal or command prompt window and navigate to the directory that contains the Python Serial Image Captrue script. Example (windows):
+
+```shell
+chdir Downloads/tinyml-project/
+```
+
+Install [PySerial](https://pyserial.readthedocs.io/en/latest/) and [Pillow](https://pillow.readthedocs.io/en/stable/) Python packages if you have not already done so
+
+```shell
+python3 -m pip install Pillow pyserial
+```
+
+Run the [Serial Image Capture Python](serial-image-catpure.py) script:
+
+```shell
+python3 serial-image-capture.py
+```
+
+> **Troubleshooting**
+> If you see an error like `No module named '_tkinter'`, it means that (for some reason) Python was not installed with the tkinter package. You will need to install it with `brew install python-tk` (macOS), `python3 -m pip install tk` (Windows and Linux).
+
+From the **Port** drop-down menu, select the serial port associated with your Arduino board (check with the Arduino IDE to verify the port).
+
+Press **Connect**. You should see a live view of the Arduino camera. Click *Embiggen view* to make the image bigger. Due to the slow nature of converting and transmitting raw image data over a serial connection, do not expect more than a few frames per second.
+
+
+## Data Augmentation (Optional)
 
 
 ## Model Training
