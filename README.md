@@ -14,7 +14,8 @@ Head Hunters
 ## Introduction and Setup
 (Intro to project)
 
-We used the Arduino Nano 33 BLE Sense Board and the OV7675 camera from the Arduino TinyML kit. (include picture below) 
+We used the Arduino Nano 33 BLE Sense Board and the OV7675 camera from the Arduino TinyML kit. 
+(include picture of board with camera) 
 
 To complete this project, we used multiple free software tools.
 - [Arduino IDE][arduino_website] (Follow instructions to download)
@@ -44,7 +45,7 @@ To train the model to recognize your faces, you need to capture images of your f
 - [Base64 Image Data Format](base64.h)
 - [Python Image Capture](serial-image-catpure.py)
 
-After these files are downloaded, save them all to the same folder. 
+After these files are downloaded, make sure they are all in the same folder. 
 Open the Arduino IDE. In the Arduino IDE, **Sketch > Include Library > Add .ZIP Librar...**. Select **Arduino_OV767X.zip** file. This library is required for the Arduino Nano 33 BLE Sense to communicate with the camera on the TinyML kit.
 
 Next, go to **File > Open...** and open the sketch **(YourFilePath)/nano33_tinyml_kit_image_serial.ino**. This file will capture, scale and crop the image and output it as Base64 data. 
@@ -79,7 +80,11 @@ From the **Port** drop-down menu, select the serial port associated with your Ar
 
 Press **Connect**. You should see a live view of the Arduino camera. Click *Embiggen view* to make the image bigger. Due to the slow nature of converting and transmitting raw image data over a serial connection, do not expect more than a few frames per second.
 
+(Include picture of serial window)
+
 Now, setup the camera such that only your face is visible in the live view of the Arduino camera. Enter your name in the box next to *Label* to set the label of the image to your name. Click **Save Image** to save the image to the directory that the Python script is in. Capture at least 50 images, slightly altering where you appear in the frame and how your head is oriented to create as full of a dataset as possible. Repeat this process for each person that you want to identify (try to keep the number of different people small).
+
+(Include picture of face)
 
 Capture at least 50 images of the background with the label *_background* so the model can recognize when a face does not appear within the frame. 
 
@@ -98,7 +103,9 @@ Go to [edgeimpulse.com](https://edgeimpulse.com/). Create an account if you have
 
 Click on **Dashboard** and click on the **Keys** tab. Double-click to highlight the entire API key and copy it (don't worry if you can't see the whole key, it will be copied).
 
-Head back to the Google Colab script. Continue running cells until you get to the `### Settings` cell. Overwrite the value of the `EI_API_KEY` string with the API key you copied from your project.
+(include picture of keys tab)
+
+Go back to the Google Colab script. Continue running cells until you get to the `### Settings` cell. Overwrite the value of the `EI_API_KEY` string with the API key you copied from your project.
 
 Continue running cells. The script performs the following actions:
 
@@ -107,14 +114,16 @@ Continue running cells. The script performs the following actions:
  * Zips the new dataset (including augmentations) into *out-augmented.zip* if you would like to download it
  * Uploads the full dataset to Edge Impulse, automatically splitting between training and test sets
 
-If you head to the *Data acquisition* page in your Edge Impulse project, you should see your fully augmented dataset split between the *Training data* and *Test data* tabs. Note that some images might not be uploaded: Edge Impulse performs a deep inspection (via hashing) of each sample to ensure no two samples are the same. So, if you try to upload two images that are exactly the same, Edge Impulse will keep the first and reject the second.
+If you head to the *Data acquisition* page in your Edge Impulse project, you should see your fully augmented dataset split between the *Training data* and *Test data* tabs.
 
 ## Model Training
-To train the model, we used Edge Impulse, which is a free AI development platform. Edge Impulse makes it easy to create a sketch that can be added to the Arduino Nano 33 BLE Sense board. In the data augmentation section, we provided a Jupyter notebook that added the dataset to an edge impulse project. 
+To train the model, we used Edge Impulse, which is a free AI development platform. Edge Impulse makes it easy to create an AI model that can be added to the Arduino Nano 33 BLE Sense board. In the data augmentation section, we provided a Jupyter notebook that added the dataset to an edge impulse project. 
 
 If you collected enough data to skip the data augmentation section, you will need to create a new [Edge Impulse](impulse_website) project. If you do not already have an account, you can create one for free. 
 
 To upload your images to Edge Impulse, put them all in a single folder. Navigate to **Data Acquisition** and click on the *Upload Data* button. Select *Select a folder* for **Upload mode**, *Automatically split between training and testing* for **Upload into category**, and *Infer from filename* for **Label**. Next click on *choose files* and select the folder with your images. Finally, select **Upload Data** to upload your images. 
+
+(include image of data upload page)
 
 > **Note**
 > The Python script that we used to capture images automatically saved each image to a file with the file name as the label followed by a unique id, which allows for Edge Impulse to label each image accurately based on the filename.
@@ -127,25 +136,29 @@ Go to your project in Edge Impulse. Go to the **Impulse design** page. Change th
 
 Click **Add a processing block** and add the **Image** block. Click **Add a learning block** and select the **Classification** block.
 
+(include image of create impulse tab)
+
 Click on **Image** under *Impulse design*. Change the *Color depth* to **Grayscale**. 
 
 Click **Save parameters** and click **Generate features** on the next page. Wait while Edge Impulse generates the training features from your dataset.
+
+(include image of image tab)
 
 When feature extraction is complete, you should see a 2D feature explorer showing the relative separation among the class groupings along with an estimation of the time and resources required to perform feature extraction on your target device (default: Arm Cortex-M4F).
 
 Click on **Classifier** under *Impulse design*. Change the *Number of training cycles* (epochs) to **100**. Leave everything else as default. Click **Start training**.
 
-When training is complete, take a look at the model results. Before the training process starts, Edge Impulse automatically sets aside a random 20% of your training data for validation. The accuracy, loss, and confusion matrix are calculated based on this validation set. How well did your model perform?
+(include image of classifiers tab)
 
 Go to the **Model testing** page and click **Classify all**. This will perform inference on your test dataset and display the results.
 
-Navigate to the **Deployment** page in your project. Edge Impulse is capable of exporting your project (feature extraction and model inference) to a number of supported hardware platforms. Note that the *C++ library* option is the most versatile: so long as your target hardware has a C++ compiler (and enough flash/RAM), you can run inference with your trained Edge Impulse model! However, the C++ library may not be optimized for some hardware (e.g. ML accelerators).
+(include image of model testing page)
 
-In the search bar, enter **Arduino** and select the **Arduino library** option.
+Navigate to the **Deployment** page in your project. In the search bar, enter **Arduino** and select the **Arduino library** option.
 
-Scroll down to the bottom of the page. Leave the [EON Compiler](https://www.edgeimpulse.com/blog/introducing-eon) enabled (this converts your interpreted model to C++ code to save on flash/ROM). Leave *Quantized (int8)* selected. Click **Build**
+Scroll down to the bottom of the page. Leave the [EON Compiler](https://www.edgeimpulse.com/blog/introducing-eon) enabled. Leave *Quantized (int8)* selected. Click **Build**
 
-When the build process is complete, you should have an Arduino library (in .zip format) automatically downloaded to your computer. This library includes the blocks we created in the Edge Impulse Studio: feature extraction and classification (i.e. the fully trained model).
+When the build process is complete, you should have an Arduino library (in .zip format) automatically downloaded to your computer. This library includes the fully trained model.
 
 
 ## Setup Live Image Classification
@@ -173,6 +186,7 @@ python3 serial-image-capture.py
 
 Select the port of your Arduino board and click **Connect**. The viewer will show you what the Arduino sees. Use the same setup as you did for image collection and get in front of the OV767 camera. The terminal window should have the printed inference results. The values correspond to the prediction scores -- the highest prediction score is the classification result. 
 
+(include image of live classification)
 
 ## Testing and Results
 (explain our results)
