@@ -175,7 +175,7 @@ Select the port of your Arduino board and click **Connect**. The viewer will sho
 
 
 ## Testing and Results
-
+(explain our results)
 
 [arduino_website]:https://www.arduino.cc/en/software
 [colab_website]:https://colab.research.google.com/
