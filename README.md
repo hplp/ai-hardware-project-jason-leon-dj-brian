@@ -30,7 +30,7 @@ python3 -m pip install Pillow pyserial
 
 > If you do not have pip installed, you will need to [install it](https://pip.pypa.io/en/stable/installation/).
 
-To follow along with the project, you will need to download the files below and save them within same folder. 
+To follow along with the project, you will need to download the files below and save them within the same folder. 
 - [Serial Communication with OV7675 camera](examples/Arduino_OV767X.zip)
 - [Arduino Image Capture](examples/nano33_tinyml_kit_image_serial.ino)
 - [Base64 Image Data Format](examples/base64.h)
