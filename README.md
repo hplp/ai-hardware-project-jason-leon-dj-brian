@@ -29,7 +29,7 @@ python3 -m pip install Pillow pyserial
 
 > If you do not have pip installed, you will need to [install it](https://pip.pypa.io/en/stable/installation/).
 
-To follow along with the project, you will need to download the files below
+To follow along with the project, you will need to download the files below and save them to the same folder. 
 - [Serial Communication with OV7675 camera](Arduino_OV767X.zip)
 - [Arduino Image Capture](nano33_tinyml_kit_image_serial.ino)
 - [Base64 Image Data Format](base64.h)
@@ -151,7 +151,7 @@ When the build process is complete, you should have an Arduino library (in .zip 
 ## Setup Live Image Classification
 Next, we set up the Arduino Nano 33 BLE Sense board to be able to perform live image classification of our faces.
 
-If you have not already, download the [Arduino Live Image Classification](nano33_camera_live_inference.ino) program.
+If you have not already, download the [Arduino Live Image Classification](nano33_camera_live_inference.ino) program make sure the [Base64](base64.h) file is in the same folder.
 
 Open the Arduino IDE then open the Live Image Classification script **File > Open** and navigate to the program on your computer. 
 
