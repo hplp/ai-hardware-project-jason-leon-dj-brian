@@ -38,7 +38,7 @@ To follow along with the project, you will need to download the files below
 - [Live Image Classification](nano33_camera_live_inference.ino)
 
 ## Image Capture
-To train the model to recognize your faces, you needed to capture images of hyour faces on the OV767X camera. You can use the following files to do so:
+To train the model to recognize your faces, you need to capture images of your faces on the OV767X camera. You can use the following files to do so:
 - [Serial Communication with OV7675 camera](Arduino_OV767X.zip)
 - [Arduino Image Capture](nano33_tinyml_kit_image_serial.ino)
 - [Base64 Image Data Format](base64.h)
