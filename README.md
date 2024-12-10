@@ -79,7 +79,12 @@ From the **Port** drop-down menu, select the serial port associated with your Ar
 
 Press **Connect**. You should see a live view of the Arduino camera. Click *Embiggen view* to make the image bigger. Due to the slow nature of converting and transmitting raw image data over a serial connection, do not expect more than a few frames per second.
 
-Now, setup the camera such that only your face is visible in the live view of the Arduino camera. Enter your name in the box next to *Label* to set the label of the image to your name. Click **Save Image** to save the image to the directory that the Python script is in. Capture at least 50 images, slightly altering where you appear in the frame and how your head is oriented to create as full of a dataset as possible. Repeat this process for each person that you want to identify (try to keep the 
+Now, setup the camera such that only your face is visible in the live view of the Arduino camera. Enter your name in the box next to *Label* to set the label of the image to your name. Click **Save Image** to save the image to the directory that the Python script is in. Capture at least 50 images, slightly altering where you appear in the frame and how your head is oriented to create as full of a dataset as possible. Repeat this process for each person that you want to identify (try to keep the number of different people small).
+
+Capture at least 50 images of the background with the label *_background* so the model can recognize when a face does not appear within the frame. 
+
+After all images are capture, add them to a single .zip file. In Windows you can do this by highlighting all of your image files and Right-Clicking **Send to > Compressed (zipped) folder**. 
+
 ## Data Augmentation (Optional)
 
 
