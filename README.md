@@ -38,14 +38,14 @@ To follow along with the project, you will need to download the files below
 - [Live Image Classification](nano33_camera_live_inference.ino)
 
 ## Image Capture
-To train the model to recognize your faces, you needed to capture images of hyour faces on the OV767X camera. You can use the following files to do so (should we include original repo?):
+To train the model to recognize your faces, you needed to capture images of hyour faces on the OV767X camera. You can use the following files to do so:
 - [Serial Communication with OV7675 camera](Arduino_OV767X.zip)
 - [Arduino Image Capture](nano33_tinyml_kit_image_serial.ino)
 - [Base64 Image Data Format](base64.h)
 - [Python Image Capture](serial-image-catpure.py)
 
-After these files are on your computer, open the Arduino IDE. 
-In the Arduino IDE, **Sketch > Include Library > Add .ZIP Librar...**. Select **Arduino_OV767X.zip** file. This library is required for the Arduino Nano 33 BLE Sense to communicate with the camera on the TinyML kit.
+After these files are downloaded, save them all to the same folder. 
+Open the Arduino IDE. In the Arduino IDE, **Sketch > Include Library > Add .ZIP Librar...**. Select **Arduino_OV767X.zip** file. This library is required for the Arduino Nano 33 BLE Sense to communicate with the camera on the TinyML kit.
 
 Next, go to **File > Open...** and open the sketch **(YourFilePath)/nano33_tinyml_kit_image_serial.ino**. This file will capture, scale and crop the image and output it as Base64 data. 
 
