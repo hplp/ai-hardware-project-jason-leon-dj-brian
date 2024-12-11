@@ -193,7 +193,20 @@ Select the port of your Arduino board and click **Connect**. The viewer will sho
 ![Live Image Classification](images/LiveClassification.JPG)
 
 ## Testing and Results
-(explain our results)
+
+### Testing
+
+To evaluate our Facial Detection AI, we each sat in front of the Arduino camera, allowing the AI to see and attempt to identify the person in the frame. Additionally, we tested the AI when no one was in the frame to ensure it would properly classify the image as "background." During testing, we varied several conditions, including the distance from the camera, the number of people in the frame, and the room's lighting.
+
+### Results
+
+Overall, our model successfully identified the correct person about 75% of the time. While this accuracy is decent, it is not optimal. We identified several factors that may have contributed to the lower success rate. 
+
+Lighting was a significant factor. The room we tested in had three lamps, providing eight combinations of light sources. Since our images were grayscale, lighting greatly affected how the model identified individuals in the frame. Another issue was that some individuals changed their appearance between training and testing, such as different hairstyles or wearing glasses. 
+
+We trained the model on 50 images per person at five different angles: front, left, right, up, and down. The limited number of images per classification likely hindered the model's ability to distinguish between different people. 
+
+These are the main challenges we identified that led to the lower success rate of our model. For future models, we recommend increasing the number of training images with varied lighting, subject appearances, and more facial angles. This approach would provide more data for training, potentially resulting in a higher success rate.
 
 [arduino_website]:https://www.arduino.cc/en/software
 [colab_website]:https://colab.research.google.com/
